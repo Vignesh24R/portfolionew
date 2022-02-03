@@ -349,7 +349,10 @@ header .navbar ul li .download {
 
 @media (max-width: 400px) {
   header {
-    width: 100vw;
+    width: 80vw;
+  }
+  section {
+    min-height: 80vh;
   }
 
   .heading {
