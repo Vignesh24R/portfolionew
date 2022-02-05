@@ -68,6 +68,9 @@ header nav ul li a i {
 header nav ul li a:hover {
   background: var(--ultravoilet);
 }
+.active {
+  background: var(--ultravoilet);
+}
 .btn {
   padding: 0.7rem 3rem;
   background: #3d305a;
@@ -265,7 +268,7 @@ header .navbar ul li .download {
 }
 
 .skills .box-container .box {
-  height: 20rem;
+  height: 12rem;
   width: 26rem;
   border-radius: 1rem;
   margin: 2rem;
@@ -303,12 +306,27 @@ header .navbar ul li .download {
 
 .top {
   position: fixed;
-  bottom: 7.5rem;
-  right: 2rem;
+  bottom: 5.5rem;
+  right: 4rem;
   z-index: 100;
   display: none;
+  padding: 0.2rem;
+  border: 0.4rem solid var(--ultravoilet);
+  border-radius: 40%;
 }
 /* ========================= media queries =================== */
+@media (max-width: 2600px) {
+  .title_edu::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -50px;
+    border: 3px solid #e69e8f;
+  }
+}
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -320,6 +338,16 @@ header .navbar ul li .download {
   body {
     padding: 5%;
     margin: 10%;
+  }
+  .title_edu::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -48px;
+    border: 3px solid #e69e8f;
   }
 }
 @media (max-width: 1090px) {
@@ -339,24 +367,57 @@ header .navbar ul li .download {
   body {
     padding: 0;
   }
+  .title_edu::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -48px;
+    border: 3px solid #e69e8f;
+  }
 }
 
 @media (max-width: 768px) {
   html {
     font-size: 50%;
   }
+  .contact {
+    min-height: 80vh;
+  }
+  .title_edu::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -45px;
+    border: 3px solid #e69e8f;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   header {
     width: 80vw;
   }
-  section {
-    min-height: 80vh;
+  .contact {
+    min-height: 70vh;
   }
 
   .heading {
     margin: 0 3rem;
+  }
+  .title_edu::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -45px;
+    border: 3px solid #e69e8f;
   }
 
   .about .row .para .box,
@@ -405,16 +466,7 @@ header .navbar ul li .download {
   color: #5f4b8b;
   position: relative;
 }
-.title_edu::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 999px;
-  left: -50px;
-  border: 3px solid #e69e8f;
-}
+
 .edu > p {
   font-size: 2rem;
   line-height: 0.7rem;
@@ -474,7 +526,7 @@ header .navbar ul li .download {
 /* +++++++++++++++++++ social media ++++++++++++++++++++++++ */
 .card_b {
   /* margin: 0 10%; */
-  padding: 30px 70px 50px 70px;
+  padding: 70px 90px 50px 70px;
   width: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
