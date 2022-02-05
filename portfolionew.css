@@ -310,9 +310,9 @@ header .navbar ul li .download {
   right: 4rem;
   z-index: 100;
   display: none;
-  padding: 0.2rem;
+  /* padding: 0.1rem;
   border: 0.4rem solid var(--ultravoilet);
-  border-radius: 40%;
+  border-radius: 50%; */
 }
 /* ========================= media queries =================== */
 @media (max-width: 2600px) {
