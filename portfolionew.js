@@ -56,17 +56,24 @@ $(document).ready(function(){
               }, 25)
           })
 
-// ========================active link====================
-const navLink = document.querySelectorAll('.nav__link');   
+// ======================== scroll spy navigation ====================
 
-function linkAction(){
-  /*Active link*/
-  navLink.forEach(n => n.classList.remove('active'));
-  this.classList.add('active');
-  
-  /*Remove menu mobile*/
-  navMenu.classList.remove('show')
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 50,
+            sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.navbar a[href*=' + sectionId + ']').classList.add('active')
+        }else{
+            document.querySelector('.navbar a[href*=' + sectionId + ']').classList.remove('active')
+        }
+    })
 }
-navLink.forEach(n => n.addEventListener('click', linkAction));
-
+window.addEventListener('scroll', scrollActive)
 
